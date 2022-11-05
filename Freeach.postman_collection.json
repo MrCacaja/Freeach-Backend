@@ -1,0 +1,960 @@
+{
+	"info": {
+		"_postman_id": "9056637b-cbe6-44c3-992e-1ba2c1f479f0",
+		"name": "Freeach",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20742057"
+	},
+	"item": [
+		{
+			"name": "Habilidade",
+			"item": [
+				{
+					"name": "Habilidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"C#\",\r\n    \"id_tipo_habilidade\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/habilidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/habilidade/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"habilidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_usuarios\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/habilidade/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"habilidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Habilidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/habilidade/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"habilidade",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Avaliação",
+			"item": [
+				{
+					"name": "Avaliação",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_autor\": 1,\r\n    \"id_avaliado\": 2,\r\n    \"comentario\": \"muito bom\",\r\n    \"pontuacao\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/avaliacao",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"avaliacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avaliação",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/avaliacao/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"avaliacao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avaliações",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/avaliacao",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"avaliacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avaliação",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comentario\": \"Não tão bom assim\",\r\n    \"pontuacao\": 6\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/avaliacao/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"avaliacao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Avaliação",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/avaliacao/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"avaliacao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Registro de usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Carlos Jefferson De Negredo\",\r\n    \"email\": \"cjdn@freeach.com\",\r\n    \"senha\": \"123abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"cjdn@freeach.com\",\r\n    \"senha\": \"123abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/usuarios/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/usuarios",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Thomas Eduardo de Negredo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/usuarios/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/usuarios/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo Habilidade",
+			"item": [
+				{
+					"name": "Tipo de Habilidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Programação\",\r\n    \"cor\": \"#34e5eb\",\r\n    \"icone\": \"computer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipos Habilidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Habilidade",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Habilidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Computação\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Habilidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_habilidade/3",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_habilidade",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tipo Serviço",
+			"item": [
+				{
+					"name": "Tipos Serviço",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_servico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Serviço",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Serviço",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Pago\",\r\n    \"cor\": \"#075c1e\",\r\n    \"icone\": \"money\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tipo_servico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Serviço",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Tem que pagar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/tipo_servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Tipo Serviço",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/tipo_servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"tipo_servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mensagem",
+			"item": [
+				{
+					"name": "Mensagens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mensagem",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mensagem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mensagem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mensagem/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mensagem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mensagem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_autor\": 1,\r\n    \"conteudo\": \"Scooby-doo é muito massa\",\r\n    \"id_chat\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/mensagem",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mensagem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mensagem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Tem que pagar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/mensagem",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mensagem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mensagem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/mensagem/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"mensagem",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Chats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/chat",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/chat/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_participantes\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/chat",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_contribuinte\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/chat/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/chat/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"chat",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Serviço",
+			"item": [
+				{
+					"name": "Serviços",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/servico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Serviço",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Serviço",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Criar o Freeach 2\",\r\n    \"descricao\": \"Porque esse aqui não é o suficiente\",\r\n    \"remoto\": true,\r\n    \"id_requisitor\": 1,\r\n    \"id_habilidades\": [1, 2],\r\n    \"id_tipos_servico\": [1]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/servico",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Serviço",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_contribuinte\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Serviço",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/servico/1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"servico",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiY2pkbkBmcmVlYWNoLmNvbSIsImV4cGlyZXMiOjE2Njc2MDkzNDguNjg3MjM2NX0.MRs6QL0a6ZCbV561FUuYjD4eaxXuBOaYVD7vuJqpG4k",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
