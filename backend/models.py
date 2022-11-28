@@ -89,6 +89,7 @@ class Servico(Base):
                                 remote_side="Usuario.id")
     status = Column(SmallInteger)
     remoto = Column(Boolean)
+    link_imagem = Column(String(255))
     habilidades = relationship("Habilidade", secondary=RelacaoServicoHabilidade, back_populates="servicos")
     tipos_servico = relationship("TipoServico", secondary=RelacaoTiposServicoServico, back_populates="servicos")
 
@@ -98,7 +99,7 @@ class TipoServico(Base):
     id = Column(Integer, primary_key=True, index=True)
     servicos = relationship("Servico", secondary=RelacaoTiposServicoServico, back_populates="tipos_servico")
     nome = Column(String(100))
-    cor = Column(String(6))
+    cor = Column(String(7))
     icone = Column(String(100))
 
 

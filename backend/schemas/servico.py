@@ -9,6 +9,7 @@ class ServicoBase(BaseModel):
     titulo: str
     descricao: str
     remoto: bool
+    link_imagem: str
 
 
 class ServicoUpdate(BaseModel):
@@ -19,6 +20,7 @@ class ServicoUpdate(BaseModel):
     id_tipos_servico: Optional[List[int]]
     titulo: Optional[str]
     descricao: Optional[str]
+    link_imagem: Optional[str]
 
 
 class ServicoCreate(ServicoBase):
