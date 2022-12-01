@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "9056637b-cbe6-44c3-992e-1ba2c1f479f0",
+		"_postman_id": "0d36bbb1-7f6a-430a-a0d0-1ac5f4c0236a",
 		"name": "Freeach",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "20742057"
+		"_exporter_id": "19715666"
 	},
 	"item": [
 		{
@@ -362,6 +362,24 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Usuario por token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/user/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiY2pkbkBmcmVlYWNoLmNvbSIsImV4cGlyZXMiOjE2Njk3NjY5MTQuMzA4ODc5NH0.49hRwVFnH1ancLg8wK1hQGAzVxr_DZTrYN7riCu17nU",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"user",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiY2pkbkBmcmVlYWNoLmNvbSIsImV4cGlyZXMiOjE2Njk3NjY5MTQuMzA4ODc5NH0.49hRwVFnH1ancLg8wK1hQGAzVxr_DZTrYN7riCu17nU"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -521,7 +539,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Pago\",\r\n    \"cor\": \"#075c1e\",\r\n    \"icone\": \"money\"\r\n}",
+							"raw": "{\r\n    \"nome\": \"Pago\",\r\n    \"cor\": \"#204500\",\r\n    \"icone\": \"cash\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -547,7 +565,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Tem que pagar\"\r\n}",
+							"raw": "{\r\n    \"icone\": \"cash\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -632,7 +650,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_autor\": 1,\r\n    \"conteudo\": \"Scooby-doo é muito massa\",\r\n    \"id_chat\": 1\r\n}",
+							"raw": "{\r\n    \"id_autor\": 2,\r\n    \"conteudo\": \"funcionando\",\r\n    \"id_chat\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -742,7 +760,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id_participantes\": [1, 2]\r\n}",
+							"raw": "{\r\n    \"id_participantes\": [3, 1]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -805,6 +823,14 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Chats de Usuário",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -853,7 +879,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"titulo\": \"Criar o Freeach 2\",\r\n    \"descricao\": \"Porque esse aqui não é o suficiente\",\r\n    \"remoto\": true,\r\n    \"id_requisitor\": 1,\r\n    \"id_habilidades\": [1, 2],\r\n    \"id_tipos_servico\": [1]\r\n}",
+							"raw": "{\r\n    \"titulo\": \"Criar o Freeach 2\",\r\n    \"descricao\": \"Porque esse aqui não é o suficiente\",\r\n    \"remoto\": true,\r\n    \"id_requisitor\": 1,\r\n    \"id_habilidades\": [1, 2],\r\n    \"id_tipos_servico\": [1],\r\n    \"link_imagem\": \"https://www.petz.com.br/blog/wp-content/uploads/2021/11/enxoval-para-gato-Copia.jpg\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -925,7 +951,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiY2pkbkBmcmVlYWNoLmNvbSIsImV4cGlyZXMiOjE2Njc2MDkzNDguNjg3MjM2NX0.MRs6QL0a6ZCbV561FUuYjD4eaxXuBOaYVD7vuJqpG4k",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiY2pkbkBmcmVlYWNoLmNvbSIsImV4cGlyZXMiOjE2Njk4NDQ3NDcuMjU1NTgyOH0.GD9A0GayU3ylKMc-Sql_88bv83zMEmVWweGhvTTCV_E",
 				"type": "string"
 			}
 		]

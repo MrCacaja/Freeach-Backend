@@ -3,7 +3,7 @@ import datetime
 
 from sqlalchemy import and_
 from sqlalchemy.orm import Session
-
+from auth.auth_handler import signJWT, get_user_id
 import models
 from schemas import usuario, tipo_habilidade, tipo_servico, servico, mensagem, avaliacao, habilidade, chat
 from exceptions import UsuarioAlreadyExistError, UsuarioNotFoundError, TipoHabilidadeNotFoundError, \
@@ -32,6 +32,10 @@ def get_all_usuarios(db: Session, offset: int, limit: int):
 
 def get_usuario_by_email(db: Session, usuario_email: str):
     return db.query(models.Usuario).filter(models.Usuario.email == usuario_email).first()
+
+
+def get_usuario_by_token(db: Session, token: str):
+    return get_usuario_by_email(db, get_user_id(token))
 
 
 def create_usuario(db: Session, usuario: usuario.UsuarioCreate):
@@ -336,6 +340,10 @@ def create_chat(db: Session, chat: chat.ChatCreate):
 
 def get_all_chats(db: Session, offset: int, limit: int):
     return db.query(models.Chat).offset(offset).limit(limit).all()
+
+
+def get_all_usuario_chats(db: Session, usuario_id: int, offset: int, limit: int):
+    return db.query(models.Chat).join(models.Chat.participantes).filter(models.Usuario.id == usuario_id).offset(offset).limit(limit).all()
 
 
 def get_chat_by_id(db: Session, chat_id: int):

@@ -83,6 +83,14 @@ async def user_login(usuario: schemas.usuario.UsuarioLoginSchema = Body(...), db
         "error": "E-mail ou senha incorretos!"
     }
 
+
+@app.get("/user/{token}", tags=["usuario"])
+async def get_user_by_token(token: str, db: Session = Depends(get_db)):
+    try:
+        return crud.get_usuario_by_token(db, token)
+    except UsuarioException as cie:
+        raise HTTPException(**cie.__dict__)
+
 # tipo de habilidade
 
 @app.get("/tipo_habilidade", dependencies=[Depends(JWTBearer())], response_model=schemas.tipo_habilidade.PaginatedTipoHabilidade)
@@ -336,6 +344,13 @@ def delete_avaliacao_by_id(avaliacao_id: int, db: Session = Depends(get_db)):
 @app.get("/chat", dependencies=[Depends(JWTBearer())], response_model=schemas.chat.PaginatedChat)
 def get_all_chats(db: Session = Depends(get_db), offset: int = 0, limit: int = 10):
     db_chats = crud.get_all_chats(db, offset, limit)
+    response = {"limit": limit, "offset": offset, "data": db_chats}
+    return response
+
+
+@app.get("/chat/usuario/{usuario_id}", dependencies=[Depends(JWTBearer())], response_model=schemas.chat.PaginatedChat)
+def get_all_usuario_chats(usuario_id: int, db: Session = Depends(get_db), offset: int = 0, limit: int = 100):
+    db_chats = crud.get_all_usuario_chats(db, usuario_id, offset, limit)
     response = {"limit": limit, "offset": offset, "data": db_chats}
     return response
 

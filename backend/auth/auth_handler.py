@@ -18,6 +18,10 @@ def signJWT(user_id: str):
     token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
     return token_response(token)
 
+def get_user_id(token: str):
+    decoded_token = decodeJWT(token)
+    return decoded_token["user_id"] if decoded_token else None
+
 def decodeJWT(token: str):
     try:
         decoded_token = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
